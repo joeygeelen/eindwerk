@@ -1,0 +1,291 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import /assets/css/reset
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500')
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css")
+html
+  scroll-behavior: smooth
+
+body
+  background-color: white
+  font-family: Montserrat
+  font-size: 1em
+  background-image: url(/assets/images/bgDrawing.jpg)
+  background-size: auto
+  background-position: center
+  background-attachment: fixed
+
+body::after
+  background-color: rgba(0, 0, 0, 40%)
+
+h2
+  font-size: 1.5em
+  text-align: center
+  text-transform: uppercase
+
+.start
+  background-image: url(/assets/images/BelgianBeer.jpg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  width: 100%
+  height: 100vh
+header
+  width: 100%
+  height: 100vh
+.container
+  width: 100%
+  background-color: #333
+  color: white
+  display: flex
+  align-items: center
+  height: 10vh
+  position: fixed
+.container a
+  color: white
+.breedte
+  display: flex
+  width: 80%
+  margin-left: 10%
+  justify-content: space-between
+.logo
+  font-size: 1.5em
+#navigatie
+  display: none
+  position: absolute
+  width: 100%
+  background-color: #333
+  text-align: center
+#navigatie a:active
+  text-decoration: none
+  color: #A99FBA
+nav ul
+  position: absolute
+  margin-top: 2vh
+  width: 100%
+  background-color: #333
+  text-align: center
+nav ul li 
+  display: flex
+  align-self: center
+  justify-content: center
+  height: 8vh
+nav ul li a
+  color: white
+  display: block
+  padding-top: 2vh
+  height: 8vh
+  width: 100%
+#hamburger
+  font-size: 1.5em
+#cross
+  display: none
+  font-size: 1.5em
+.herotext
+  color: white
+  padding-top: 60vh
+  line-height: 5vh
+  width: 100%
+  letter-spacing: 0.1em
+.herotext, .naam
+  text-align: center
+  font-size: 1.5em
+  font-weight: bold
+.herotext, .job
+  text-align: center
+  font-size: 1em
+.arrowcontainer
+  display: flex
+  justify-content: center
+.arrow
+  display: flex
+  justify-content: center
+  width: 20%
+  align-items: baseline
+  color: white
+  font-size: 3.5em
+  transition: 0.5s
+a.arrow:hover
+  text-decoration: none
+  color: #4A3252
+  transition: 0.5s
+.scroll-link 
+  position: absolute
+  bottom: 1rem
+  left: 50%
+  transform: translateX(-50%)
+.mouse
+  max-width: 2.5rem
+  width: 100%
+  height: auto
+
+.scroll
+  animation-name: scroll
+  animation-duration: 1.5s
+  animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500)
+  animation-iteration-count: infinite
+  transform-origin: 50% 20.5px
+  will-change: transform
+main
+  width: 100%
+.about
+  width: 100%
+  background-color: #fff
+  min-height: 100vh
+  padding-bottom: 4vh
+.about h2
+  padding-top: 3vh
+.me
+  width: 80%
+  margin-left: 10%
+  line-height: 2em
+.me p
+  padding-top: 4vh
+.jq
+  display: none
+.work
+  width: 80%
+  margin-left: 10%
+  background-color: #DDD
+  text-align: center
+  margin-top: 3vh
+  margin-bottom: 3vh
+  padding-bottom: 4vh
+.work h2
+  padding-top: 3vh
+  margin-bottom: 4vh
+.project
+  margin-left: 10%
+  width: 80%
+.imgFlex a
+  display: block
+  width: 50%
+
+.imgFlex a img
+  width: 100%
+.imgFlex
+  display: flex
+  align-items: baseline
+  background-color: white
+  margin-left: 1%
+  margin-right: 1%
+.hSkill
+  text-align: center
+  padding-top: 2vh
+.skills
+  display: flex
+  justify-content: space-between
+  width: 80%
+  margin-left: 10%
+.skill
+  width: 100%
+.skill
+  margin-top: 30px
+.dev
+  width: 45%
+.des
+  width: 45%
+h4
+  font-size: 0.9em
+  padding-bottom: 1vh
+
+footer
+  width: 100%
+  height: 10vh
+  background-color: #333
+  display: flex
+  color: white
+  justify-content: center
+  align-items: center
+  font-size: 2em
+.contact
+  width: 80%
+  display: flex
+  justify-content: space-between
+.contact a
+  color: white
+@media( min-width: 950px)
+  .start
+    background-position: unset
+  #cross
+    display: none
+  #hamburger
+    display: none
+  .container
+    width: 100%
+    height: 10vh
+  nav ul
+    display: flex
+    height: auto
+    justify-content: space-between
+    align-items: center
+    margin-top: 0
+    position: relative
+  .breedte
+    width: 90%
+  nav ul li a
+    display: block
+    display: flex
+    align-items: center
+  a.logo:hover
+    color: #A99FBA
+    text-decoration: none
+    transition: 0.5s
+  #navigatie
+    width: 60%
+    padding-right: 10%
+    display: block
+    position: relative
+    transition: 0.5s
+  #navigatie a:hover,
+  #navigatie a:active
+    color: #A99FBA
+    text-decoration: none
+    transition: 0.4s
+  .logo
+    font-size: 1em
+  .herotext
+    padding-top: 30vh
+  .heortext, .naam
+    font-size: 2em
+  .herotext, .job
+    font-size: 1.3em
+  .arrowcontainer
+    padding-top: 35vh
+  .about
+    min-height: 93vh
+  .about h2
+    padding-top: 7vh
+  .me
+    width: 80%
+    margin-left: 10%
+    display: flex
+    justify-content: space-between
+    padding-top: 2vh
+  .me p
+    padding-top: 4vh
+    width: 47%
+  .jq
+    display: inline
+  .work h2
+    padding-top: 7vh
+  .imgFlex
+    display: block
+    width: 33.33333%
+  .imgFlex a
+    width: 100%
+  .hSkill
+    text-align: center
+
+  .project
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+  .contact a:hover
+    color: #A99FBA
+    transition: 0.4s
+  .zelf
+    object-fit: cover
+    object-position: 0px 10%
+  footer
+    font-size: 3em
