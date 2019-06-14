@@ -1,5 +1,12 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
+header("Content-Type: application/json; charset=UTF-8");
+
 require_once('../lib/database_functions.php');
+
+
 
 $request = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
@@ -38,7 +45,7 @@ if ( $method == "GET" AND $mainpart == "bier" )
     foreach($ds->rows as $row)
     {
         $bier[$row["bie_id"]] = ["merk"=>$row["bie_merk"], "naam"=>$row["bie_naam"], "inhoud"=>$row["bie_inhoud"],
-            "prijs"=>$row["bie_prijs"], "percentage"=>$row["bie_percentage"],"kleur"=>$row["kle_naam"], "streek"=>$row["str_naam"]];
+            "prijs"=>$row["bie_prijs"], "percentage"=>$row["bie_percentage"],"kleur"=>$row["kle_naam"], "streek"=>$row["str_naam"], "img"=>$row["bie_img"]];
 
     }
     print json_encode($bier);
@@ -65,7 +72,7 @@ function GetAllBieren()
     foreach($ds->rows as $row)
     {
         $bieren[$row["bie_id"]] = ["merk"=>$row["bie_merk"], "naam"=>$row["bie_naam"], "inhoud"=>$row["bie_inhoud"],
-            "prijs"=>$row["bie_prijs"], "percentage"=>$row["bie_percentage"],"kleur"=>$row["kle_naam"], "streek"=>$row["str_naam"]];
+            "prijs"=>$row["bie_prijs"], "percentage"=>$row["bie_percentage"],"kleur"=>$row["kle_naam"], "streek"=>$row["str_naam"], "img"=>$row["bie_img"]];
 
     }
     return $bieren;

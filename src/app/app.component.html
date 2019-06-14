@@ -28,22 +28,27 @@
 <main>
     <section class="work" id="s2">
         <h2>Suggesties</h2>
+        <div *ngFor="let bier of bieren">
             <!-- CARD HERHALEN -->
             <section class="card-container">
                 <article class="c-card">
                     <div class="c-card__header">
-                        <img src="../assets/images/grimbergen.png"  class="c-card__image" alt="Card Image" />
+                        <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
                     </div>
                     <div class="c-card__body">
                         <h2 class="c-card__title">
-                            Grimbergen
+                            {{bier.merk}}
                         </h2>
                         <p class="c-card__subtitle">
-                            Dubbel
+                            {{bier.naam}}
                         </p>
 
                         <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Inhoud: {{bier.inhoud}}cl <br>
+                            Prijs: &euro;{{bier.prijs}} <br>
+                            Percentage: {{bier.percentage}}&#37; <br>
+                            Kleur: {{bier.kleur}} <br>
+                            Streek: {{bier.streek}}
                         </p>
                     </div>
                     <div class="c-card__footer">
@@ -51,6 +56,7 @@
                     </div>
                 </article>
             </section>
+        </div>
             <!-- CARD HERHALEN -->
             <section class="card-container">
                 <article class="c-card">

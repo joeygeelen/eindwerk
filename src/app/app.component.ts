@@ -9,11 +9,11 @@ import { HttpClient, HttpHeaderResponse, HttpHeaders } from '@angular/common/htt
 export class AppComponent {
     title = 'Eindwerk';
 
-    GET_SERVER_URL = 'http://localhost/eindwerk/webshop/restapi/bieren';
+    GET_SERVER_URL = 'https://wdev.be/joey/webshop/restapi/bieren';
     // DELETE_SERVER_URL = 'http://localhost/nootnoot/user/';
     // PUT_SERVER_URL = 'http://localhost/nootnoot/user/';
     // POST_SERVER_URL = 'http://localhost/nootnoot/users';
-     users: any;
+     bieren: any;
     request = new XMLHttpRequest();
     id;
     name;
@@ -29,9 +29,19 @@ export class AppComponent {
         this.http.get(this.GET_SERVER_URL, {responseType: 'json'})
             .subscribe((result) => {
                 console.log(JSON.stringify(result));
-
+                let tempArr = {};
+                Object.keys(result).forEach( key => {
+                    tempArr['merk'] = [result[key].merk];
+                    tempArr['naam'] = [result[key].naam];
+                    tempArr['inhoud'] = [result[key].inhoud];
+                    tempArr['prijs'] = [result[key].prijs];
+                    tempArr['percentage'] = [result[key].percentage];
+                    tempArr['kleur'] = [result[key].kleur];
+                    tempArr['streek'] = [result[key].streek];
+                    tempArr['img'] = [result[key].img];
+                });
                 // put data in to variable for html-usage
-                this.users = result;
+                this.bieren = [tempArr];
             });
     }
 }
