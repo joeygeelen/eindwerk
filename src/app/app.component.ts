@@ -14,9 +14,9 @@ export class AppComponent {
     // PUT_SERVER_URL = 'http://localhost/nootnoot/user/';
     // POST_SERVER_URL = 'http://localhost/nootnoot/users';
      bieren: any;
-    request = new XMLHttpRequest();
-    id;
-    name;
+     request = new XMLHttpRequest();
+     id;
+     name;
 
     constructor(private http: HttpClient) {
         // get data when refreshed
@@ -28,20 +28,9 @@ export class AppComponent {
         // get call + responseType = give response as text
         this.http.get(this.GET_SERVER_URL, {responseType: 'json'})
             .subscribe((result) => {
-                console.log(JSON.stringify(result));
-                let tempArr = {};
-                Object.keys(result).forEach( key => {
-                    tempArr['merk'] = [result[key].merk];
-                    tempArr['naam'] = [result[key].naam];
-                    tempArr['inhoud'] = [result[key].inhoud];
-                    tempArr['prijs'] = [result[key].prijs];
-                    tempArr['percentage'] = [result[key].percentage];
-                    tempArr['kleur'] = [result[key].kleur];
-                    tempArr['streek'] = [result[key].streek];
-                    tempArr['img'] = [result[key].img];
-                });
-                // put data in to variable for html-usage
-                this.bieren = [tempArr];
+                this.bieren = result.results;
             });
+                // put data in to variable for html-usage
     }
 }
+

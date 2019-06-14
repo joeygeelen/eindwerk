@@ -33,7 +33,29 @@ if ( $method == "GET" AND $mainpart == "bieren"  )
 {
     $bieren = GetAllBieren();
     print json_encode( $bieren );
+    /*print '{"results": [{
+            "img": "kasteelrouge.png",
+            "inhoud": "33",
+            "kleur": "Rood",
+            "merk": "Kasteel",
+            "naam": "Rouge",
+            "percentage": "8.00",
+            "prijs": "3.80",
+            "streek": "Izegem"
+            },
+        {
+            "img": "maes.jpg",
+            "inhoud": "25",
+            "kleur": "Blond",
+            "merk": "Maes",
+            "naam": "Pils",
+            "percentage": "4.50",
+            "prijs": "2.20",
+            "streek": "Opwijk"
+            }]
+    }';*/
 }
+
 
 //GET bier: een bier geven
 if ( $method == "GET" AND $mainpart == "bier" )
@@ -68,13 +90,17 @@ function GetAllBieren()
     $ds = new DataSet("SELECT * FROM bier 
                             INNER JOIN kleur ON bie_kle_id = kle_id
                             INNER JOIN streek ON bie_str_id = str_id", $conn, true);
+    $bier = array();
     $bieren = array();
     foreach($ds->rows as $row)
     {
-        $bieren[$row["bie_id"]] = ["merk"=>$row["bie_merk"], "naam"=>$row["bie_naam"], "inhoud"=>$row["bie_inhoud"],
+        $bier = ["merk"=>$row["bie_merk"], "naam"=>$row["bie_naam"], "inhoud"=>$row["bie_inhoud"],
             "prijs"=>$row["bie_prijs"], "percentage"=>$row["bie_percentage"],"kleur"=>$row["kle_naam"], "streek"=>$row["str_naam"], "img"=>$row["bie_img"]];
 
+        $bieren[] = $bier;
     }
-    return $bieren;
+
+    $result = array("results"=>$bieren);
+    return $result;
 }
 ?>

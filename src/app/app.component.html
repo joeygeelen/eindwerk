@@ -28,191 +28,38 @@
 <main>
     <section class="work" id="s2">
         <h2>Suggesties</h2>
-        <div *ngFor="let bier of bieren">
+
             <!-- CARD HERHALEN -->
-            <section class="card-container">
+            <section *ngFor="let bier of bieren" class="card-container">
                 <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            {{bier.merk}}
-                        </h2>
-                        <p class="c-card__subtitle">
-                            {{bier.naam}}
-                        </p>
+                    <div>
+                        <div class="c-card__header">
+                            <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
+                        </div>
+                        <div class="c-card__body">
+                            <h2 class="c-card__title">
+                                {{bier.merk}}
+                            </h2>
+                            <h3 class="c-card__subtitle">
+                                {{bier.naam}}
+                            </h3>
 
-                        <p class="c-card__intro">
-                            Inhoud: {{bier.inhoud}}cl <br>
-                            Prijs: &euro;{{bier.prijs}} <br>
-                            Percentage: {{bier.percentage}}&#37; <br>
-                            Kleur: {{bier.kleur}} <br>
-                            Streek: {{bier.streek}}
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
+                            <p class="c-card__intro">
+                                Inhoud: {{bier.inhoud}}cl <br>
+                                Prijs: &euro;{{bier.prijs}} <br>
+                                Percentage: {{bier.percentage}}&#37; <br>
+                                Kleur: {{bier.kleur}} <br>
+                                Streek: {{bier.streek}}
+                            </p>
+                        </div>
+                        <div class="c-card__footer">
+                            Footer
+                        </div>
                     </div>
                 </article>
             </section>
-        </div>
+
             <!-- CARD HERHALEN -->
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section>
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section><section class="card-container">
-            <article class="c-card">
-                <div class="c-card__header">
-                    <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                </div>
-                <div class="c-card__body">
-                    <h2 class="c-card__title">
-                        Card
-                    </h2>
-                    <p class="c-card__subtitle">
-                        initial component
-                    </p>
-
-                    <p class="c-card__intro">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-                <div class="c-card__footer">
-                    Footer
-                </div>
-            </article>
-        </section>
-
-
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section>
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section>
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section>
-            <section class="card-container">
-                <article class="c-card">
-                    <div class="c-card__header">
-                        <img src="http://placehold.it/350x200"  class="c-card__image" alt="Card Image" />
-                    </div>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
-                            Card
-                        </h2>
-                        <p class="c-card__subtitle">
-                            initial component
-                        </p>
-
-                        <p class="c-card__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="c-card__footer">
-                        Footer
-                    </div>
-                </article>
-            </section>
 
     </section>
 </main>
