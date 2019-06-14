@@ -18,6 +18,7 @@ export class AppComponent {
      id;
      name;
 
+
     constructor(private http: HttpClient) {
         // get data when refreshed
         this.getRequest();
@@ -27,8 +28,8 @@ export class AppComponent {
     getRequest() {
         // get call + responseType = give response as text
         this.http.get(this.GET_SERVER_URL, {responseType: 'json'})
-            .subscribe((result) => {
-                this.bieren = result.results;
+            .subscribe((result: any) => {
+                 this.bieren = result.results;
             });
                 // put data in to variable for html-usage
     }
