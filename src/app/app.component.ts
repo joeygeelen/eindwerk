@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaderResponse, HttpHeaders } from '@angular/common/htt
 export class AppComponent {
     title = 'Eindwerk';
 
-    GET_SERVER_URL = 'https://wdev.be/joey/webshop/restapi/bieren';
+    GET_SERVER_URL = 'https://wdev.be/joey/be/restapi/bieren';
     // DELETE_SERVER_URL = 'http://localhost/nootnoot/user/';
     // PUT_SERVER_URL = 'http://localhost/nootnoot/user/';
     // POST_SERVER_URL = 'http://localhost/nootnoot/users';
