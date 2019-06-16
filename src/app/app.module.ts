@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AllebierenComponent } from './allebieren/allebieren.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 
@@ -20,6 +21,7 @@ import { AccountComponent } from './account/account.component';
     RegisterComponent,
     HomeComponent,
     AccountComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,

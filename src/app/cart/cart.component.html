@@ -1,0 +1,48 @@
+<div id="w">
+    <header id="title">
+        <article class="breedte">
+            <a href="#" title="logo" class="logo "><i class="fas fa-beer"></i></a>
+            <a href="#" id="hamburger" class="fas fa-ellipsis-v"></a>
+            <a href="#" id="cross" class="fas fa-times"></a>
+        </article>
+        <nav id="navigatie" class="menu">
+            <ul>
+                <li><a routerLink="" routerLinkActive="active" title="home" class="menu"><p>Home</p></a></li>
+                <li><a routerLink="/allebieren" routerLinkActive="active" title="About me" class="menu"><p>Alle bieren</p></a></li>
+                <li><a routerLink="/cart" routerLinkActive="active" title="login" class="menu"><p>Cart</p></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="page">
+        <table id="cart">
+            <thead>
+            <tr>
+                <th class="first">Photo</th>
+                <th class="second">Qty</th>
+                <th class="third">Product</th>
+                <th class="fourth">Line Total</th>
+                <th class="fifth">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- TODO shopping cart contents -->
+            <tr class="productitm">
+                <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+                <td><img src="images/design-bundle-pack.png" class="thumb"></td>
+                <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+                <td>Design Bundle Package</td>
+                <td>€79.00</td>
+                <td><span class="remove"><img src="images/trash.png" alt="X"></span></td>
+            </tr>
+            <!-- tax + subtotal -->
+            <tr class="totalprice">
+                <td class="light">Totaal:</td>
+                <td colspan="2">&nbsp;</td>
+                <td colspan="2"><span class="thick">€225.45</span></td>
+            </tr>
+
+            <!-- checkout btn -->
+
+                <button class="btn btn-yellow">Doorgaan</button>
+
+            </tbody>
