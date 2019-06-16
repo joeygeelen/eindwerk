@@ -9,7 +9,7 @@ import { AllebierenComponent } from './allebieren/allebieren.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     AllebierenComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

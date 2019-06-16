@@ -12,11 +12,11 @@
     </ul>
   </nav>
 </section>
-<div class="login">
+<form class="login" (submit)="loginUser($event)" >
   <input type="text" placeholder="Username" id="username">
   <input type="password" placeholder="password" id="password">
   <a href="#" class="forgot">forgot password?</a>
   <input type="submit" value="Sign In">
   <a href="/register" class="register-btn">Registreer</a>
-</div>
+</form>
 <div class="shadow"></div>
