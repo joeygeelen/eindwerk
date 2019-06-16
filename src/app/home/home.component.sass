@@ -30,7 +30,7 @@ body
 
 .c-card
   display: inline-block
-  max-width: 25%
+  max-width: 70%
   margin: 20px
   cursor: pointer
   transition: all 0.3s ease
@@ -141,3 +141,186 @@ body
     left: 0
     height: 50px
     margin: auto
+.start
+  background-image: url(/assets/images/BelgianBeer.jpg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  width: 100%
+  height: 100vh
+header
+  width: 100%
+  height: 100vh
+.container
+  width: 100%
+  background-color: #333
+  color: white
+  display: flex
+  align-items: center
+  height: 10vh
+  position: fixed
+.container a
+  color: white
+.breedte
+  display: flex
+  width: 80%
+  margin-left: 10%
+  justify-content: space-between
+.logo
+  font-size: 1.5em
+#navigatie
+  display: block
+  position: absolute
+  width: 100%
+  //background-color: #333
+  text-align: center
+#navigatie a:active
+  text-decoration: none
+  color: #A99FBA
+nav ul
+  display: flex
+  justify-content: space-evenly
+  margin-top: 2vh
+  width: 100%
+  //background-color: #333
+  text-align: center
+nav ul li
+  display: flex
+  align-self: center
+  justify-content: center
+  height: 8vh
+nav ul li a
+  color: white
+  display: block
+  padding-top: 2vh
+  height: 8vh
+  width: 100%
+  text-decoration: none
+#hamburger
+  font-size: 1.5em
+#cross
+  display: none
+  font-size: 1.5em
+.herotext
+  color: white
+  padding-top: 60vh
+  line-height: 5vh
+  width: 100%
+  letter-spacing: 0.1em
+.herotext, .naam
+  text-align: center
+  font-size: 1.5em
+  font-weight: bold
+.herotext, .job
+  text-align: center
+  font-size: 1em
+.arrowcontainer
+  display: flex
+  justify-content: center
+.arrow
+  display: flex
+  justify-content: center
+  width: 20%
+  align-items: baseline
+  color: white
+  font-size: 3.5em
+  transition: 0.5s
+a.arrow:hover
+  text-decoration: none
+  color: #4A3252
+  transition: 0.5s
+.scroll-link
+  position: absolute
+  bottom: 1rem
+  left: 50%
+  transform: translateX(-50%)
+.mouse
+  max-width: 2.5rem
+  width: 100%
+  height: auto
+
+.scroll
+  animation-name: scroll
+  animation-duration: 1.5s
+  animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500)
+  animation-iteration-count: infinite
+  transform-origin: 50% 20.5px
+  will-change: transform
+
+@mixin button-bg($bg)
+  background: $bg
+  &:hover
+    background: darken($bg,8%)
+    transition: all 0.3s ease
+  &:active
+    background: darken($bg,25%)
+
+.btn
+  color: white
+  text-decoration: none
+  padding: 5px 10px
+  border-radius: 3px
+  font-size: 1em
+  border-radius: 7px
+  width: 30%
+  margin-left: 35%
+  text-align: center
+  border: none
+.btn-yellow
+  @include button-bg(#f1c40f)
+
+
+@media( min-width: 950px)
+  .c-card
+    max-width: 25%
+  .start
+    background-position: unset
+  #cross
+    display: none
+  #hamburger
+    display: none
+  .container
+    width: 100%
+    height: 10vh
+  nav ul
+    display: flex
+    height: auto
+    justify-content: space-between
+    align-items: center
+    margin-top: 0
+    position: relative
+  .breedte
+    width: 90%
+  nav ul li a
+    display: block
+    display: flex
+    align-items: center
+  a.logo:hover
+    color: #A99FBA
+    text-decoration: none
+    transition: 0.5s
+  #navigatie
+    width: 60%
+    padding-right: 10%
+    display: block
+    position: relative
+    transition: 0.5s
+  #navigatie a:hover,
+  #navigatie a:active
+    color: #A99FBA
+    text-decoration: none
+    transition: 0.4s
+  .logo
+    font-size: 1em
+  .herotext
+    padding-top: 30vh
+  .heortext, .naam
+    font-size: 2em
+  .herotext, .job
+    font-size: 1.3em
+  .arrowcontainer
+    padding-top: 35vh
+  .about
+    min-height: 93vh
+  .about h2
+    padding-top: 7vh

@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AllebierenComponent } from './allebieren/allebieren.component';
-import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'allebieren', component: AllebierenComponent},
-    {path: 'contact', component: ContactComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
     {path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 

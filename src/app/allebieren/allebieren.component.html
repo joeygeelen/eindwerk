@@ -1,48 +1,65 @@
+
+
+<section class="container"  id="myHeader">
+    <article class="breedte">
+        <a href="#" title="logo" class="logo "><i class="fas fa-beer"></i></a>
+        <a href="#" id="hamburger" class="fas fa-ellipsis-v"></a>
+        <a href="#" id="cross" class="fas fa-times"></a>
+    </article>
+    <nav id="navigatie" class="menu">
+        <ul>
+            <li><a routerLink="" routerLinkActive="active" title="home" class="menu"><p>Home</p></a></li>
+            <li><a routerLink="/allebieren" routerLinkActive="active" title="About me" class="menu"><p>Alle bieren</p></a></li>
+            <li><a routerLink="/login" routerLinkActive="active" title="login" class="menu"><p>Login</p></a></li>
+        </ul>
+    </nav>
+</section>
+
 <main>
-  <section class="work" id="s2">
-    <h2>Suggesties</h2>
+    <section class="work" id="s2">
+        <h2>Alle onze bieren</h2>
 
-    <!-- CARD HERHALEN -->
-    <section *ngFor="let bier of bieren" class="card-container">
-      <article class="c-card">
-        <div>
-          <div class="c-card__header">
-            <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
-          </div>
-          <div class="c-card__body">
-            <h2 class="c-card__title">
-              {{bier.merk}}
-            </h2>
-            <h3 class="c-card__subtitle">
-              {{bier.naam}}
-            </h3>
+        <!-- CARD HERHALEN -->
+        <section *ngFor="let bier of bieren" class="card-container">
+            <article class="c-card">
+                <div>
+                    <div class="c-card__header">
+                        <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
+                    </div>
+                    <div class="c-card__body">
+                        <h2 class="c-card__title">
+                            {{bier.merk}}
+                        </h2>
+                        <h3 class="c-card__subtitle">
+                            {{bier.naam}}
+                        </h3>
 
-            <p class="c-card__intro">
-              Inhoud: {{bier.inhoud}}cl <br>
-              Prijs: &euro;{{bier.prijs}} <br>
-              Percentage: {{bier.percentage}}&#37; <br>
-              Kleur: {{bier.kleur}} <br>
-              Streek: {{bier.streek}}
-            </p>
-          </div>
-          <div class="c-card__footer">
-            Footer
-          </div>
-        </div>
-      </article>
+                        <p class="c-card__intro">
+                            Inhoud: {{bier.inhoud}}cl <br>
+                            Prijs: &euro;{{bier.prijs}} <br>
+                            Percentage: {{bier.percentage}}&#37; <br>
+                            Kleur: {{bier.kleur}} <br>
+                            Streek: {{bier.streek}}
+                        </p>
+                    </div>
+                    <div class="c-card__footer">
+                        <button class="btn btn-yellow">Kopen</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- CARD HERHALEN -->
+
     </section>
-
-    <!-- CARD HERHALEN -->
-
-  </section>
 </main>
 <footer>
-  <section class="contact" id="contact">
-    &copy; All rights reserved
-  </section>
+    <section class="contact" id="contact">
+        &copy; All rights reserved
+    </section>
 </footer>
-<router-outlet></router-outlet>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/lightbox.js"></script>
+<!--<router-outlet></router-outlet>-->
