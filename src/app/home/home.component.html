@@ -1,0 +1,48 @@
+<main>
+  <section class="work" id="s2">
+    <h2>Suggesties</h2>
+
+    <!-- CARD HERHALEN -->
+    <section *ngFor="let bier of bieren" class="card-container">
+      <article class="c-card">
+        <div>
+          <div class="c-card__header">
+            <img src="../assets/images/{{bier.img}}"  class="c-card__image" alt="Card Image" />
+          </div>
+          <div class="c-card__body">
+            <h2 class="c-card__title">
+              {{bier.merk}}
+            </h2>
+            <h3 class="c-card__subtitle">
+              {{bier.naam}}
+            </h3>
+
+            <p class="c-card__intro">
+              Inhoud: {{bier.inhoud}}cl <br>
+              Prijs: &euro;{{bier.prijs}} <br>
+              Percentage: {{bier.percentage}}&#37; <br>
+              Kleur: {{bier.kleur}} <br>
+              Streek: {{bier.streek}}
+            </p>
+          </div>
+          <div class="c-card__footer">
+            Footer
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- CARD HERHALEN -->
+
+  </section>
+</main>
+<footer>
+  <section class="contact" id="contact">
+    &copy; All rights reserved
+  </section>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/lightbox.js"></script>
+<!--<router-outlet></router-outlet>-->
