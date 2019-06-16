@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AllebierenComponent } from './allebieren/allebieren.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 
 
@@ -18,6 +19,7 @@ import { HomeComponent } from './home/home.component';
     AllebierenComponent,
     LoginComponent,
     RegisterComponent,
+    CartComponent,
     HomeComponent
   ],
   imports: [
