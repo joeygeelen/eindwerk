@@ -20,7 +20,7 @@ import { AccountComponent } from './account/account.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AccountComponent
+    AccountComponent,
     CartComponent,
   ],
   imports: [
